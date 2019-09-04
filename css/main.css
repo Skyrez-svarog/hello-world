@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.loader {
+    position: absolute;
+    margin: 0 auto;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 100;
+    animation: animBack 1.4s forwards ease-in;
+}
+
+.pageloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #111013 0%, #2f3970 100%) !important;
+}
+
+.circleloaderFadeUp {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 44%;
+    top: 40%;
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    border-radius: 100%;
+    animation: fadeUP 1s infinite linear;
+}
+
+.circleloaderFadeDown {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 44%;
+    top: 40%;
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    border-radius: 100%;
+    animation: fadeDown 1s infinite linear;
+}
+
+@keyframes fadeUP {
+     0% {
+        transform: scale(0);
+    }
+    40%, 100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeDown {
+     0% {
+        transform: scale(0.75)
+    }
+    40%, 100% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+}
+
+@keyframes animBack {
+    0%, 50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-290%);
+    }
+}
+
+iframe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transform: scale(1.2);
+    -webkit-user-select: none;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 0;
+    filter: blur(0.2px)
+}
+
+.title {
+    position: fixed;
+    top: 35%;
+    left: 34%;
+    color: #ffffff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 25px;
+    opacity: .8;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 7px 5px 10px #000000;
+    z-index: 1;
+}
+
+.buttons {
+    position: fixed;
+    top: 32%;
+    left: 31.4%;
+    color: #CFCFCF;
+    margin-top: 50px;
+    z-index: 1;
+    width: 1900px;
+    height: 900px;
+    display: flex;
+}
+
+a {
+    display: flex;
+    width: 104px;
+    height: 104px;
+    cursor: pointer;
+    border: 0px solid #ffffff;
+    border-radius: 50%;
+    margin-left: 1.7%;
+    margin-top: 2%;
+    box-shadow: .5px .5px 3px #000000;
+}
+
+a#vk {
+    background: url("https://image.flaticon.com/icons/svg/49/49444.svg") no-repeat left top;
+    background-size: cover;
+}
+
+a#git {
+    background: url("https://image.flaticon.com/icons/svg/25/25231.svg") no-repeat left top;
+    background-size: cover;
+}
+
+a#telegram {
+    background: url("https://image.flaticon.com/icons/svg/1384/1384016.svg") no-repeat left top;
+    background-size: cover;
+}
+
+a#yt {
+    background: url("https://image.flaticon.com/icons/svg/1384/1384012.svg") no-repeat left top;
+    background-size: cover;
+}
+
+a:hover {
+    border: 3px solid #ffffff;
+    transform: scale(1.2);
+    transition: .2s
+}
